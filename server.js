@@ -12,7 +12,18 @@ const db = new sqlite3.Database("database.db", (err) => {
 });
 
 // Middleware
-app.use(cors());
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "http://reactjs-test-12.s3-website.ap-south-1.amazonaws.com"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
+  })
+);
 app.use(express.json()); // Add this middleware to parse JSON requests
 
 // Doctor Model
