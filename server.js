@@ -18,6 +18,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://reactjs-test-12.s3-website.ap-south-1.amazonaws.com"
+      "http://elasticbeanstalk-nigrodhan1-env.eba-pmetsgqg.ap-south-1.elasticbeanstalk.com/availability"
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
