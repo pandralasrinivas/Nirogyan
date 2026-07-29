@@ -232,6 +232,13 @@ Team Nirogyan
   );
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Elastic Beanstalk CI/CD deployment successful",
+    version: "2.0"
+  });
+});
+
 // Schedule Controller
 app.get('/api/schedule', (req, res) => {
   const date = req.query.date || new Date().toISOString().split('T')[0];
